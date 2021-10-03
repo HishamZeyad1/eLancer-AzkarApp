@@ -9,28 +9,31 @@ class AzkarScreen extends StatefulWidget {
 
 class _AzkarScreenState extends State<AzkarScreen> {
   int _counter = 0;
-  String _content="الحمد الله";
+  String _content="استغفر الله";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      // extendBodyBehindAppBar: true,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          setState(() {
-            ++_counter;
-          });
+          // setState(() {
+          //   ++_counter;
+          // }
+          Navigator.pushNamed(context, '/bio_screen');
+          // );
         },
-        child: Icon(Icons.add),
-        backgroundColor: Colors.teal,
+        child: Icon(Icons.info),
+        backgroundColor: Colors.cyan.shade200,
       ),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+
         elevation: 0,
-        centerTitle: true,
+        backgroundColor: Colors.teal.shade400,
+        // centerTitle: true,
         automaticallyImplyLeading: true,
         title: Text(
           "سبحة الأذكار",
-          style: TextStyle(fontFamily: 'Noto', color: Colors.black),
+          style: TextStyle(fontFamily: 'Noto', color: Colors.white),
         ),
         actions: [
           PopupMenuButton<String>(
@@ -50,8 +53,8 @@ class _AzkarScreenState extends State<AzkarScreen> {
                 value: "الحمدالله",
               ),
               PopupMenuItem(
-                child: Text("استغر الله"),
-                value: "استغر الله",
+                child: Text("استغفر الله"),
+                value: "استغفر الله",
               ),
               PopupMenuItem(
                 child: Text("سبحان الله"),
@@ -109,7 +112,7 @@ class _AzkarScreenState extends State<AzkarScreen> {
                   ),
                   DecoratedBox(
                     decoration: BoxDecoration(
-                      color: Colors.teal,
+                      color: Colors.teal.shade300,
                     ),
                     child: SizedBox(
                       width: 50,
@@ -148,7 +151,7 @@ class _AzkarScreenState extends State<AzkarScreen> {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.teal.shade800,
+                      primary: Colors.teal.shade300,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadiusDirectional.only(
                           topStart: Radius.circular(10),
@@ -172,7 +175,7 @@ class _AzkarScreenState extends State<AzkarScreen> {
                       //    ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.orange.shade700,
+                      primary: Colors.orange.shade200,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadiusDirectional.only(
                           bottomEnd: Radius.circular(10),

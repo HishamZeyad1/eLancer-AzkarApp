@@ -15,7 +15,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
     Future.delayed(
       Duration(seconds: 3),
       () {
-        Navigator.pushNamed(context, '/azkar_screen');
+        Navigator.pushReplacementNamed(context, '/azkar_screen');
       },
     );
   }
@@ -35,7 +35,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
               ]),
         ),
         child: Text(
-          "مسبحة الاذكار",
+          "سبحة الاذكار",
           style: TextStyle(
               fontFamily: 'Noto', fontSize: 22, fontWeight: FontWeight.bold),
         ),
